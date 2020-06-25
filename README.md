@@ -32,3 +32,4 @@ Things that can be done :
 - create a vector to have multiples fruits at once(should be done quickly, just adapt the code)
 - fix the postorderTraversal function (no idea of how easy it can be to fix)
 - make the MCTS better by saying that a move is better if it gets us closer to a fruit (mostly useful with one fruit)
+ 
