@@ -1,0 +1,9 @@
+﻿  Main.cpp
+Main.cpp(275): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+Main.cpp(430): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+Main.cpp(433): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+Main.cpp(443): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+Main.cpp(447): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+Main.cpp(590): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  SnakeNode.cpp
+LINK : fatal error LNK1181: impossible d'ouvrir le fichier en entrée 'sfml-main-s.lib'
