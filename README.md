@@ -5,6 +5,9 @@ Snake Game with a MCTS to predict your next move
 This code use a Monte Carlo Tree Search algorithm to predict what move the player will choose based on which move leads to victory.
 The code can be modified, and has comments to understand how it works. If needed, you can contact me to understand the code better.
 
+YOU NEED VS 2017 TO RUN THIS.
+Don't forget to check if the SFML library is correctly added (follow to tutorial on their website to check)
+
 
 Made by Lilian "Banalian" Pouvreau
 For any questions/help with this code
