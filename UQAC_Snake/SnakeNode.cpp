@@ -98,6 +98,7 @@ SnakeNode::~SnakeNode()
 	parent = nullptr;
 }
 
+//add the child(ren)
 void SnakeNode::addchildren(void)
 {
 	//if ((!eatHimself) /*&& (movesSinceLastFruit <150)&& (!eatAppleThisMove)*/) {
@@ -138,6 +139,7 @@ void SnakeNode::addchildren(void)
 	
 }
 
+//add the child(ren)
 void SnakeNode::add1child(int newdir)
 {
 	if ((!eatHimself) && (!eatAppleThisMove)) {
@@ -154,6 +156,7 @@ void SnakeNode::add1child(int newdir)
 	}
 }
 
+//fill the entire sub-tree
 void SnakeNode::expendTree(void)
 {
 	addchildren();
@@ -171,6 +174,7 @@ void SnakeNode::expendTree(void)
 	}
 }
 
+//update the fruit pos and length of the snake
 void SnakeNode::updateFruit(int number, unsigned char fruitx, unsigned char fruity)
 {
 	numb = number;
@@ -180,6 +184,7 @@ void SnakeNode::updateFruit(int number, unsigned char fruitx, unsigned char frui
 
 }
 
+//MCTS-related functions
 void SnakeNode::addVisitsOrWins(int v, int w = 0)
 {
 
@@ -188,11 +193,13 @@ void SnakeNode::addVisitsOrWins(int v, int w = 0)
 	return;
 }
 
+//MCTS-related functions
 int SnakeNode::getVisits(void)
 {
 	return visits;
 }
 
+//MCTS-related functions
 int SnakeNode::getWins(void)
 {
 	//int tempwins = wins;
@@ -200,6 +207,8 @@ int SnakeNode::getWins(void)
 	return wins;
 }
 
+//MCTS-related functions
+//input is void because they update based on the child's informations
 int SnakeNode::updateVisits(void)
 {
 	int tempvisits = 0;
@@ -212,6 +221,8 @@ int SnakeNode::updateVisits(void)
 
 }
 
+//MCTS-related functions
+//input is void because they update based on the child's informations
 int SnakeNode::updateWins(void)
 {
 	int tempwins = 0;
@@ -224,7 +235,7 @@ int SnakeNode::updateWins(void)
 }
 
 
-
+//old function
 /*bool SnakeNode::killedHimself(int cpt, Snake head)
 {
 	if(cpt<=0)return false;
@@ -236,6 +247,8 @@ int SnakeNode::updateWins(void)
 	
 }*/
 
+//not working at the moment, the recursive function isn't correct
+//you can fix it if needed, to check how much moves are needed at least to get to a fruit, if possible
 int SnakeNode::postorderTraversal(void)
 {
 
@@ -254,6 +267,7 @@ int SnakeNode::postorderTraversal(void)
 
 }
 
+//test/assert to be sure that there are children so we don't have any nullptr error
 bool SnakeNode::assertchildren(void)
 {
 	for (int i = 0; i < 3; i++) {
@@ -262,12 +276,14 @@ bool SnakeNode::assertchildren(void)
 	return true;
 }
 
+//test/assert to be sure that there are children so we don't have any nullptr error
 bool SnakeNode::assertchild(int i)
 {
 	if (children[i] == nullptr)return false;
 	return true;
 }
 
+//get a pointer to the start of the array keeping tracks of the segments
 Snake * SnakeNode::getsnakesseg()
 {
 	return snakeseg;

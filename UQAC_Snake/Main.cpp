@@ -21,7 +21,8 @@
 //- create a vector to have multiples fruits at once(should be done quickly, just adapt the code)
 //- fix the postorderTraversal function (no idea of how easy it can be to fix)
 //- make the MCTS better by saying that a move is better if it gets us closer to a fruit (mostly useful with one fruit)
-
+//-check for memory leaks : there might be some when we keep the same tree between games : that or it's just a big tree
+//add some "noises" to the mcts : make it be +/- 1 off sometimes, or take some times to find it's way after getting a fruit.
 
 #include <SFML/Graphics.hpp> // to show the game with more than just text
 #include <stdlib.h>     /* srand, rand */
