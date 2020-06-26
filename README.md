@@ -10,9 +10,15 @@ Don't forget to check if the SFML library is correctly added (follow to tutorial
 
 
 Made by Lilian "Banalian" Pouvreau
+
+
 For any questions/help with this code
+
 Mail    : lilian.pouvreau@free.fr
+
 Discord : Banalian#0584
+
+
 Open source code :can be used and modified by anyone at anytime as long as credit is given
 
 
